@@ -2,33 +2,33 @@ package pair;
 
 public class Pair<T> {
 	
-	private T first;
-	private T second;
+	private T min;
+	private T max;
 	
 	public Pair() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Pair(T first, T second) {
+	public Pair(T min, T max) {
 		// TODO Auto-generated constructor stub
-	    this.first = first;
-	    this.second = second;
+	    this.min = min;
+	    this.max = max;
 	}
 	
-	public void setFirst(T first) {
-		this.first = first;
+	public void setFirst(T min) {
+		this.min = min;
 	}
 	
 	public T getFirst() {
-		return first;
+		return min;
 	}
 	
-	public void setSecond(T second) {
-		this.second = second;
+	public void setSecond(T max) {
+		this.max = max;
 	}
 
 	public T getSecond() {
-		return second;
+		return max;
 	}
 	
 }

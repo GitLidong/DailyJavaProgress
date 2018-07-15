@@ -8,3 +8,37 @@ public class TestConstruct {
 	}
 	
 }
+
+class Father {
+
+	private String name;
+	
+	public Father() {
+		// TODO Auto-generated constructor stub
+		this.name = "lee";
+		System.out.println("Father Construct");
+	}
+	
+	public String getName() {
+		return name;
+	}
+}
+
+class Son extends Father{
+
+	private String name;
+	
+	public Son(String name) {
+		super();
+		// TODO Auto-generated constructor stub
+		this.name = name;
+		System.out.println("Son Construct");
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return name;
+	}
+	
+}

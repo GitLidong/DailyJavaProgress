@@ -1,4 +1,4 @@
-package threaddemo;
+package synchronizer;
 
 /*
  * 假设一条流水线上有三个工作者：worker0，worker1，worker2。
@@ -14,13 +14,13 @@ package threaddemo;
 public class ThreadJoin {
 
 	public static void main(String[] args) {
-		Worker worker0 = new Worker("Worker0", (long)(Math.random()*2000+3000));
-		Worker worker1 = new Worker("Worker1", (long)(Math.random()*2000+3000));
-		Worker worker2 = new Worker("Worker2", (long)(Math.random()*2000+3000));
-		
+		Worker worker0 = new Worker("Worker0", (long) (Math.random() * 2000 + 3000));
+		Worker worker1 = new Worker("Worker1", (long) (Math.random() * 2000 + 3000));
+		Worker worker2 = new Worker("Worker2", (long) (Math.random() * 2000 + 3000));
+
 		worker0.start();
 		worker1.start();
-		
+
 		try {
 			worker0.join();
 			worker1.join();
@@ -28,9 +28,34 @@ public class ThreadJoin {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		 System.out.println("准备工作就绪");  
-		 worker2.start();
-		
+
+		System.out.println("准备工作就绪");
+		worker2.start();
+
+	}
+}
+
+class Worker extends Thread {
+	// 工作者名
+	private String name;
+	// 工作时间
+	private long time;
+
+	public Worker(String name, long time) {
+		this.name = name;
+		this.time = time;
+	}
+
+	@Override
+	public void run() {
+		// TODO 自动生成的方法存根
+		try {
+			System.out.println(name + "开始工作");
+			Thread.sleep(time);
+			System.out.println(name + "工作完成，耗费时间=" + time);
+		} catch (InterruptedException e) {
+			// TODO 自动生成的 catch 块
+			e.printStackTrace();
+		}
 	}
 }

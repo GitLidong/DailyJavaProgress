@@ -16,13 +16,14 @@ public class WordsNum {
 
 		int a = is.read(b);
 
-		String str[] = new String(b,0,a).split("");
+		String str[] = new String(b, 0, a).split("");
 
 		int count = 0;
 
-		for(int i = 0;i<str.length;i++){
+		for (int i = 0; i < str.length; i++) {
 
-		if("a".equals(str[i]))count++;
+			if ("i".equals(str[i]))
+				count++;
 
 		}
 

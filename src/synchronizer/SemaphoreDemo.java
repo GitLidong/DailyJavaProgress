@@ -1,4 +1,4 @@
-package threaddemo;
+package synchronizer;
 
 import java.util.concurrent.Semaphore;
 
@@ -20,8 +20,6 @@ public class SemaphoreDemo {
 		for (int i = 0; i<people; i++) {
 			new Worker(i+1, semaphore).start();
 		}
-		
-		System.out.println("工作完毕");
 	}
 	
 	

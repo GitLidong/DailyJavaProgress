@@ -1,0 +1,220 @@
+实现线程的方式以及区别：
+    实现Runnable接口
+    继承Thread类
+直接调用线程中的run方法，只会执行同一个线程中的任务，而不会启动新线程。应该调用start方法，将创建一个执行run方法的新线程。
+-----------------------------------------------------------------------------------------------------------------------------------------------
+中断线程：当线程的run方法体中最后一条语句执行后，并经由执行return语句返回时，或者出现了在方法中没有捕获的异常时，线程将种植。
+    强制线程终止的方法：interrupt请求终止线程，线程的中断状态将被置位。这是每个线程都具有的boolean标志。每个线程都应时不时的检查这个标志，以判 断线程是否被中断。
+    但是如果线程被阻塞（Sleep,wait)，就无检测中断状态，阻塞调用interrupt将会被InterruptedException异常中断。
+    中断一个线程不过是引起它的注意，被中断的线程可以决定如何响应中断。某些线程是如此重要以至于应该处理完异常后，继续执行，而不理会中断，但是更普遍的情况是线程将中断作为一个终止的请求。
+    interrupted()测试当前线程时候被中断，这个调用将当前的中断状态重置为false。
+    isInterrupted()测试线程是否被终止，这一调用不改变线程的状态。
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+线程的6个状态：
+    New： 使用new创建一个线程时，该线程还没有开始运行。
+    Runnable：调用start方法后，可运行的线程可能正在运行也可能没有运行，取决于操作系统给线程提供的运行时间。运行中的线程被中断，目的是让其他线程会运行机会。线程调度的细节依赖于操作系统提供的服务。抢占式调度系统给每个线程一个时间片来执行任务，当时间片用完，操作系统剥夺该线程的运行权，给其他线程运行机会，选择下个线程考虑线程的优先级。（现在所有的桌面以及服务器操作系统都是用抢占式调度，但是像手机这样的小型设备可能使用协作式调度，在这样的设备中，一个线程只有调用yield方法，或者被阻塞或等待时，线程才会失去控制权。
+    Blocked、Waiting、Timed waiting计时等待：处于阻塞或等待状态的线程暂时不活动，不运行任何代码且消耗最少的资源。直到线程的调度器重新激活它。
+        （1）当一个线程试图获取一个内部的对象锁（而不是java.util.concurrent库中的锁），而该锁被其他线程持有，则该线程进入阻塞状态。当所有其他线程释放该锁，并且线程调度器允许本线程持有它的时候，该线程变为非阻塞状态。
+        （2）当线程等待另一个线程通知调度器一个条件时，它自己进入等待状态，在调用Object.wait或Thread.join方法，或者是等待java.util.concurrent库中的Lock或Condition时，就会出现这种情况。
+        （3）有几个方法有一个超时参数，调用他们导致线程进入计时等待状态，这一状态将一直保持到超时期满或者接收到适当的通知。如Thread.sleep、Object.wait、Thread.join、Lock.tryLock、Condition.await的计时版
+    Terminated
+        （1）run方法正常退出而自然死亡。
+        （2）因为一个没有捕获的异常终止了run方法而意外死亡。
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+线程的属性：
+（1）优先级：默认情况下会继承父类的优先级，可以用setPriority方法提高或降低优先级。MIN_PRIORITY 1 MAX_PRIORITY 10之间的任何值。NORM_PRIORITY 5
+当线程调度器重新选择新线程时，首先选择具有较高优先级的线程。线程的优先级是高度以来于系统的。当虚拟机依赖于宿主机平台的线程实现机制时，Java线程的优先级被映射到宿主机平台的优先级上，优先级个数也许更多，也许更少。（如果有几个高优先级的线程没有进入非活动状态，优先级低的线程可能永远也不能执行）
+    yield方法导致当前执行线程处于让步状态，如果有其他的客运可运行线程具有至少与此线程同样高的优先级，那么这些线程接下来会被调度。
+（2）守护线程：serDaemon(true)将线程转化为守护线程，守护线程唯一的用途是为其他线程提供服务（如计时器线程），当只剩下守护线程时，虚拟机就退出了。
+ 守护线程应该永远不去访问固有资源，如文件数据库，因为它会在任何时候设置一个操作的中间发生中断。
+ （3）未捕获异常处理器：线程的run方法不能抛出任何被检测的异常，但是不被检测的异常会导致线程终止。这种情况下，线程就死亡了。 
+ 不需要任何catch子句来处理可以被传播的异常，相反，在线程死亡之前，异常被传递到一个用于未捕获异常的处理器。
+ 该处理器必须属于一个实现Thread.UncaughtExceptionHandled接口的类，这个接口只有一个方法， void uncaughtException(Thread t, Throwable e)
+ 可以用setUncaughtExceptionHandler方法为任何线程安装一个处理器，也可以用Thread类的静态方法setDefaultUncaughtExceptionHandler为所有线程安装一个默认的处理器。
+ 如果不安装默认的处理器，默认的处理器为空，但是如果不为独立的线程安装处理器，此时的处理器就是该线程的ThreadGroup对象。
+ ThreadGroup对象实现Thread.UncaughtExceptionHandler接口，它的uncaught方法如下：
+     1）如果该线程有父线程组，那么调用父线程的uncaughtException
+     2）否则如果Thread.getDefaultExceptionExceptionHandler返回非空的处理器，则调用该处理器
+     3）否则，如果Throwable是ThreadDeath的一个实例，什么都不做。
+     4）否则，线程的名字以及Throwable的栈踪迹被输出到System.err上。
+     
+-----------------------------------------------------------------------------------------------------------------------------------------------
+同步：
+    （1）竞争条件
+    （2）锁对象：两种机制防止代码块受并打访问的干扰
+        synchronized 关键字自动提供一个锁以及相关的条件，对于大多数需要锁的情况，这是很便利的。
+        Java中每个对象内部都有一个内部锁，如果一个方法用 synchronized 关键字修饰，那么对象的锁保护整个方法。
+        将静态方法声明为 synchronized，那么调用这种方法会获得相关的类对象的内部锁。
+        内部锁和条件存在一个局限：
+        A：不能中断一个正在试图获得锁的线程
+        B：试图获得锁时不能设定超时
+        C：每个锁仅有单一的条件，可能是不够的。
+
+class Bank {
+    public synchronized void transfer(int from, int to, int amount) {
+        while(accounts[from] < amount) {
+            wait();//wait on intrinsic object lock's signle condition
+        }
+        accounts[from] -= amount;
+        accounts[to]   += amouns;
+        notifyAll();// notify all threads waiting on the condition
+    }
+} 
+        
+        ReentrantLock 确保任何时候只有一个线程进入临界区，一旦一个线程封锁了锁对象，其他任何线程都无法通过lock语句。如果两个线程访问不同的对象，每个线程得到不同的锁对象，两个线程都不会发生阻塞。如果访问同一个锁对象，那么锁以串行方式提供服务。
+        锁是可重入的，因为线程可以重复的获得已持有的锁，锁保持一个持有计数（hold count)来跟踪对Lock方法的嵌套调用。每次lock都要调用unlock来解锁。由于这一特性，被一锁保护的代码可以调用另一个使用相同锁的方法。
+        
+        条件对象：当账户中没有足够余额时，等待另一账户注入资金，但是该线程获得了ReentrantLock锁的排他性访问，因此其他线程无法进行存款操作。此时就需要条件对象。一个锁对象可以有一个或多个条件对象，newCondition方法获得一个条件对象。当余额不足时，当前线程被阻塞，并放弃了锁（sufficientFunds.await()），这样其他线程便可以进行增加账户余额。一旦一个线程调用await方法，它进入该条件的等待集。当锁可用时，该线程不能马上接触阻塞，相反，它处于阻塞状态，知道另一个线程调用同一条件上的signalAll方法时为止。当另一个线程转账时，调用sufficientFunds.signalAll()，激活因为这一条件而等待的所有线程，这些线程从等待集中移出，再次成为可运行，一旦锁成为可用的，他们中的某个将从await调用返回，获得该锁并从被阻塞的地方继续执行。  当一个线程调用await时，他没有办法重新激活自身，寄希望于其他线程，如果没有其他线程重新激活等待的线程，他就永远不再运行，这将导致死锁(deadlock）现象，程序就挂起了。应该何时调用signalAll？在对象的状态有利于等待线程的方向改变时调用。如当账户余额发生变化时，等待线程应检查余额。
+        锁特点总结：
+        A：锁用来保护代码片段，任何时刻只能有一个线程执行被保护的代码
+        B：锁可以用来管理试图进入代码段的线程。
+        C：锁可以拥有一个或者多个条件对象
+        D：每个条件对象管理那些已进入被保护的代码段但还不能运行的线程
+class Bank {
+    ReentrantLock bankLock = new ReentrantLock();
+    Condition sufficientFunds = bankLock.newCondition();
+    public void transfer(int from, int to, int amount) {
+        bankLock.lock();
+        try {
+            while(accounts[from] < amount) {
+               //wait
+               sufficientFunds.await();
+            }
+            //transfer funs
+            accounts[from] -= amount;
+            accounts[to]   += amouns;
+            sufficientFunds.signalAll();
+        } finally {
+            bankLock.unlock();
+        }
+    }
+} 
+        那么在代码中应该使用哪一种？
+        最好既不使用Lock/Condition也不使用 synchronized 关键字。在许多情况下可以使用java.util.concurrent包中的一种同步机制，会为你处理所有的加锁
+        如果 synchronized 关键字适合你的程序，那么请尽量使用它，这样可以减少代码数量，减少出错。
+        如果特别需要Lock/Condition结果提供的独有特性时，才使用它。
+        
+        
+        同步阻塞：lock对象被创建仅仅是用来使用每个Java对象持有的锁，用一个对象的锁来实现额外的原子操作，实际上称为客户端锁定。客户端锁定是非常锁定的，不推荐使用。
+class Bank {
+    private Object lock = new Object();
+    public void transfer(int from, int to, int amount) {
+        synchronized(lock) {
+            accounts[from] -= amount;
+            accounts[to]   += amouns;
+        }
+    }
+}
+ 
+    （3）Volatile域：有时仅仅为了读写一个或两个实例域就使用同步，显得开销过大。 volatile 关键字为实例域的同步访问提供了一种免锁机制。
+public synchronized boolean isDone() { return done;}
+public synchronized void setDone() { done = true;}
+private boolean done;
+等价于下面
+public boolean isDone() { return done;}
+public void setDone() { done = true;}
+private volatile boolean done;
+    
+        volatile 不能提供原子性，如 public void filpDone() { done = !done; } 不能确保改变域中的值
+        这种情况下，使用 AtomicBoolean ，这个类有 get 和 set方法，且确保了原子性。 java.util.concurrent.atomic中有许多包装器类用于原子的整数、浮点、数组等。这些类是为编写并发实用程序的系统程序员提供实用的，而不是应用程序员。
+        
+        总之，在以下是3个条件中，域的并发访问是安全的：
+        A：域是final，并且在构造器调用完成之后被访问
+        B：对域的访问由共有的锁进行保护
+        C：域是 volatile 的
+        
+    （4）锁测试与超时
+    线程在调用lock方法来获得另一个线程所持有的锁的时候，很可能发生阻塞
+    tryLock 方法试图申请一个锁，在成功获得锁后返回true,否则立即返回false，而且线程可以离开去做其他事情。
+    lock方法不能被中断，如果一个线程在等待获得一个锁时被中断，中断线程在获得锁之前一直处于阻塞状态。如果死锁出现，那么lock方法就无法终止。
+    tryLock在线程等待期间被中断，将抛出 InterruptedException异常，允许线程打破死锁。
+    也可以调用lockInterruptibly方法，它相当于一个超时为无限的 tryLock方法。
+    在等待一个条件时，也可以提供一个超时  mCondition.await(100,TimeUnit.MILLISECONDS))
+    
+    (5)读写锁： ReentrantReadWriteLock rwl = new ReentrantReadWriteLock();
+                Lock readLock = rwl.readLock();
+                Lock writeLock = rwl.writeLock();
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+为什么弃用 线程的 stop 和 suspend 方法：
+    stop方法会终止所有未结束的方法，包括run方法，当线程被终止，立即释放被他锁住的所有对象的锁。这会导致对象处于不一致的状态。例如转账过程被终止，钱已经取出，但是却没有目标账户。
+    suspend阻塞一个线程，如果挂起一个持有锁的线程，那么该锁在恢复之前是不可用的，如果调用suspend方法的线程试图获得同一个锁，那么程序死锁，被挂起的线程等待被恢复，而将其挂起的线程等待获得锁。
+-----------------------------------------------------------------------------------------------------------------------------------------------
+阻塞队列：
+     以上是Java并发程序设计基础的底层构件块，但是实际编程过程中要远离底层结构。
+     许多线程问题，可以通过使用队列方式将其形式化，生产者线程向队列中插入元素，消费者线程则取出他们。当试图向队列添加元素而队列已满时，或是向移除元素但队列为空时，阻塞队列（blocking queue)导致线程阻塞。
+     阻塞队列方法：
+     add            添加一个元素              如果队列满，则抛出 IllegalStateException 异常
+     element        返回队列的头元素          如果队列空，则抛出 NoSuchElementException 异常
+     offer          添加一个元素返回 true     如果队列满，返回 false
+     peek           返回队列的头元素          如果队列空，返回 null
+     pool           移除并返回头元素          如果队列空，返回 null
+     put            添加一个元素              如果队列满，则阻塞
+     remove         移除并返回头元素          如果队列空，则抛出 NoSuchElementException 异常
+     take           移除并返回头元素          如果队列空，则阻塞
+     
+     java.util.concurrent包提供了阻塞队列的几个变种:
+     默认情况下， LinkedBlockingQueue的容量是没有上边界的，但是也可以选择制定最大容量。
+     LinkedBlockingDeque 是一个双端的版本。
+     ArrayBlockingQueue在构造时需要指定容量，并且有一个可选的参数来指定是否需要公平性，那么等待时间最长的线程优先得到处理，但是公平性会降低性能
+     PriorityBlockingQueue是一个带优先级的队列，而不是先进先出队列。元素按照他们优先级顺序被移出。该队列没有上限。如果空，取元素会阻塞。 DelayedQueue包含了实现Delayed接口的对象，getDelay方法返回对象的残留延迟，负值表示延迟结束，元素只有在延迟用完时候才能从DelayQueue中移除。还必须实现 compareTo方法，用它进行排序。
+     
+-----------------------------------------------------------------------------------------------------------------------------------------------
+线程安全的集合：
+	（1）高效的映像、集和和队列
+	java.util.concurrent包提供了映像、有序集和队列的高效实现：
+	ConcurrentHashMap   ConcurrentSkipListMap  ConcurrentSkipListSet  ConcurrentLinkedQueue
+	与大多数集和不同，size方法不必再常量时间内操作，确定这样的集合当前的大小通常需要遍历。
+	集合返回弱一致性的迭代器，这意味着迭代器不一定能反映出他们被构造之后的所有的修改，但是它们刽将同一个值返回两次，也不会抛出
+	ConcurrentModificationException异常。
+	并发的散列表，可高效的支持大量的读者和一定数量的写者。默认情况下可以有16个线程写。
+	ConcurrentHashMap  ConcurrentSkipListMap 类有相应的方法用于原子性的关联插入以及关联删除。
+	1》putIfAbsent(key,value) 添加新的关联
+	2》remove(key,value) 删除
+	3》replace(key,oldValue,newValue)替换
+	
+	（2）写数组的拷贝
+	CopyOnWriteArrayList和CopyOnWriteArraySet是线程安全的集合，其中所有的修改线程对底层数组进行复制，如果再集合上进行迭代的线程超过修改线程数，这样的安排是很有用的，当构建一个迭代器的时候，它包含了一个队当前数组的引用。如果数组后来被修改了，迭代器仍然引用旧数组，但是集合的数组已经被替换了，因而，旧的迭代器拥有一致的（可能过时的）视图，访问它无需任何同步开销。
+	
+	（3）旧的线程安全集合
+	从Java初始版本开始，Vector 和 Hashtable 类就提供了线程安全的动态数组和散列表的实现。后来被弃用，取而代之的是 ArrayList 和 HashMap 类，这些类不是线程安全的，而集合库中提供了不同的机制，任何集合类通过使用同步包装器变成线程安全的
+	List<E> syncArrayList = Collection.synchronizedList(new ArrayList<E>());
+	Map<K,V> syncHashMap = Collection.synchronizedMap(new HashMap<K,V>());
+	结果集合的方法使用锁加以保护，体用了线程的安全访问。要去报没有任何线程通过原始的非同步的方法访问数据结构。
+	如果在另一个线程可能进行修改时要对集合进行迭代，仍然需要使用客户端封锁:
+	synchronized ( syncHashMap ) {
+		Iterator<K> iter = syncHashMap.keySet().iterator();
+		while(iter.hasNext()) ...
+	}
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Callable 与 Future
+	Runnable封装一个异步任务，可以把它想象成为一个没有参数没有返回值的异步方法。
+	Callable与Runnable类似，但是有返回值，它只有一个方法call,类型参数是返回值的类型。
+	Future保存异步计算的结果，Future接口有如下方法： get()   get(long timeout,TimeUnit unit)  cancel(boolean)  isCancelled()  isDone()
+	FutureTask包装器是一个非常便利的机制，可将Callable转换成Future和Runnable，它同时实现两者的接口。
+
+public interface Callable<V> {
+	V call() throws Exception;
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------
+执行器（Executor）
+	构建新的线程是有一定代价的，涉及到与操作系统的交互。如果存在大量生命周期较短的线程，应该使用线程池。并且线程池还可以减少并发线程的数目，创建大量线程会大大降低性能甚至使虚拟机崩溃。
+	
+ExecutorService pool = Executors.newCachedThreadPool();   (newFixedThreadPoll   newSingelThreadPool    newScheduledThreadPool)
+pool.submit( Runnable task)或者 (Runnable  task, T result)  或者 （Callable<T> task)   返回 Future对象。
+
+	控制任务组：
+	invokeAny 方法提交所有任务对象到一个Callable对象的集合中，并返回某个已经完成了的任务的结果。无法知道返回的究竟是哪个任务的结果。
+	invokeAll 方法提交所有任务对象到一个Callable对象的集合中，并返回一个Future对象的列表，代表所有任务的解决方案。
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+同步器
+	1> 倒计时门栓 CyclicBarrier 允许线程集等待至其中预定数目的线程到达一个公共障栅（barrier），然后可以选择执行一个处理障栅的动作。
+		当大量的线程需要在他们的结果可用之前完成时
+	2> 障栅 CountDownLatch 允许线程集等待直到计数器减为0 ，当一个或多个线程需要等待直到指定书目的时间发生
+	3> 交换器 Exchanger 允许连个线程在要交换的对象准备好时交换对象 ，当两个想先工作在同一数据结构的两个实例上的时候，一个向实例添加数据而另一个从实例清除数据。
+	4> 信号量 Semaphore 允许线程等待直到被允许继续运行为止，  限制访问资源的线程总数，如果许可数是1，常常阻塞线程直到另一个线程给出许可为止。
+	
+	5> 同步队列 SynchronousQueue 允许一个线程把对象交给另一个线程， 在没有显示同步的情况下，当两个线程准备好将一个对象从一个线程传递到另一个时。
