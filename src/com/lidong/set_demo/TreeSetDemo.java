@@ -9,9 +9,9 @@ public class TreeSetDemo {
 	public static void main(String[] args) {
 		
 		SortedSet<Item> parts = new TreeSet<Item>();
-		parts.add(new Item("AAA", 333));
-		parts.add(new Item("BBB", 111));
-		parts.add(new Item("CCC", 222));
+		parts.add(new Item("AA", 33));
+		parts.add(new Item("BB", 11));
+		parts.add(new Item("CC", 22));
 		System.out.println(parts);
 		
 		
