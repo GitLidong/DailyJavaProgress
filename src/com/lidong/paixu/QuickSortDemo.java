@@ -18,6 +18,15 @@ package com.lidong.paixu;
 第二次排序结束 ： {13} （27） {38}  (49)  {49 65}  (76)  {97}
 第三次排序结束 ： (13) （27） (38)  (49)  (49)  {65}  (76)  (97)
 第四次排序结束 ： (13) （27） (38)  (49)  (49)  （65）  (76)  (97)    此时无法再次进行排序。结束。
+
+ 分析：
+快速排序是通常被认为在同数量级（O(nlog2n)）的排序方法中平均性能最好的。
+但若初始序列按关键码有序或基本有序时，快排序反而蜕化为冒泡排序。
+为改进之，通常以“三者取中法”来选取基准记录，即将排序区间的两个端点与中点三个记录关键码居中的调整为支点记录。
+
+快速排序是一个不稳定的排序方法。
+
+
 */
 
 public class QuickSortDemo extends ArrayResource {
@@ -25,15 +34,16 @@ public class QuickSortDemo extends ArrayResource {
 		// TODO Auto-generated method stub
 		int array[] = { 49, 38, 65, 97, 76, 13, 27, 49 };
 		QuickSortDemo demo = new QuickSortDemo();
-		demo.quickSortDem(array, 0, array.length - 1);
+		// demo.quickSort(array, 0, array.length - 1);
+		demo.quickSortImprove(array, 0, array.length - 1);
 		printArray(array);
 	}
 
-	private void quickSortDem(int[] arry, int low, int high) {
+	private void quickSort(int[] arry, int low, int high) {
 		if (low < high) {
 			int middle = getMiddle(arry, low, high);
-			quickSortDem(arry, low, middle - 1);
-			quickSortDem(arry, middle + 1, high);
+			quickSort(arry, low, middle - 1);
+			quickSort(arry, middle + 1, high);
 		}
 	}
 
@@ -52,4 +62,32 @@ public class QuickSortDemo extends ArrayResource {
 		array[low] = base;
 		return low;
 	}
+
+	/**
+	 * 在本改进算法中,只对长度大于k的子序列递归调用快速排序,让原序列基本有序，然后再对整个基本有序序列用插入排序算法排序。
+	 * 实践证明，改进后的算法时间复杂度有所降低，且当k取值为 8 左右时,改进算法的性能最佳。
+	 */
+	private void quickSortImprove(int[] array, int low, int high) {
+		if ((high - low) > 8) {
+			int middle = getMiddle(array, low, high);
+			quickSortImprove(array, low, middle - 1);
+			quickSortImprove(array, middle + 1, high);
+		} else {
+			for (int i = 1; i < array.length; i++) {
+				straightInsert(array);
+			}
+		}
+	}
+
+	private void straightInsert(int[] array) {
+		for (int i = 1; i < array.length; i++) {
+			int aim = array[i];
+			int j;
+			for (j = i; j > 0 && array[j - 1] > aim; j--) {
+				array[j] = array[j - 1];
+			}
+			array[j] = aim;
+		}
+	}
+
 }
