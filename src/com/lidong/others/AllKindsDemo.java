@@ -39,6 +39,8 @@ public class AllKindsDemo {
 		}
 		System.out.println(after);
 		System.out.println(reverse(after));
+		
+		System.out.println("AAAA   "+":main camera: Not found".toLowerCase().contains("not found"));
 	}
 
 	public static String reverse(String originStr) {

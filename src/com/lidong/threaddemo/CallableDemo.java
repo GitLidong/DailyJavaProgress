@@ -10,20 +10,20 @@ import java.util.concurrent.Future;
 public class CallableDemo {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
-//		ExecutorService exec = Executors.newCachedThreadPool();
-//		ArrayList<Future<String>> results = new ArrayList<>();
-//		for (int i = 0; i < 10; i++) {
-//			results.add(exec.submit(new TalkWithResult(i)));
-//		}
-//		exec.shutdown();
-//		for(Future<String> fsFuture : results) {
-//			System.out.println(fsFuture.get());
-//		}
-		
-		ExecutorService exec1 = Executors.newCachedThreadPool();
+		ExecutorService exec = Executors.newCachedThreadPool();
+		ArrayList<Future<String>> results = new ArrayList<>();
 		for (int i = 0; i < 10; i++) {
-			exec1.execute(new FibnaoicTask1(i));
+			results.add(exec.submit(new TalkWithResult(i)));
 		}
+		exec.shutdown();
+		for(Future<String> fsFuture : results) {
+			System.out.println(fsFuture.get());
+		}
+		
+//		ExecutorService exec1 = Executors.newCachedThreadPool();
+//		for (int i = 0; i < 10; i++) {
+//			exec1.execute(new FibnaoicTask1(i));
+//		}
 	}
 	
 }
