@@ -1,4 +1,4 @@
-package com.lidong.threaddemo;
+package com.lidong.threaddemo.synchronizer;
 
 /*
  * 设置1个线程用来往阻塞队列中不断的添加文件
@@ -47,7 +47,7 @@ class FileEnumQueueTask implements Runnable {
 	public void run() {
 		try {
 			enumerate(startingDic);
-			queue.put(DUMMY);
+			queue.put(DUMMY);//结束标志
 		} catch (InterruptedException e) {
 		}
 	}
@@ -58,7 +58,7 @@ class FileEnumQueueTask implements Runnable {
 			if (file.isDirectory()) {
 				enumerate(file);
 			} else {
-				queue.put(file);
+				queue.put(file);//队列中添加文件
 			}
 		}
 	}
@@ -77,9 +77,9 @@ class SearchTask implements Runnable {
 		try {
 			boolean done = false;
 			while (!done) {
-				File file = queue.take();
+				File file = queue.take();//队列中取出文件
 				if (file == FileEnumQueueTask.DUMMY) {
-					queue.put(file);
+					queue.put(file); //结束标志
 					done = true;
 				} else {
 					search(file);

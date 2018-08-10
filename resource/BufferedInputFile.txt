@@ -1,0 +1,84 @@
+1 : package com.lidong.iodemo.io;
+2 : 
+3 : import java.io.BufferedReader;
+4 : import java.io.FileReader;
+5 : import java.io.IOException;
+6 : import java.io.PrintWriter;
+7 : import java.io.StringReader;
+8 : 
+9 : public class BufferedInputFile {
+10 : 
+11 : 	public static String fileName = "src/com/lidong/iodemo/io/BufferedInputFile.java";
+12 : 	public static String aimFileName = "resource/BufferedInputFile.txt";
+13 : 
+14 : 	/**
+15 : 	 * @param args
+16 : 	 * @throws IOException
+17 : 	 */
+18 : 	public static void main(String[] args) throws IOException {
+19 : 		// TODO Auto-generated method stub
+20 : 		//System.out.println(readFromFile(fileName));
+21 : 		// readFromRAM();
+22 : 		
+23 : 		writeToFile();
+24 : 	}
+25 : 
+26 : 	/**
+27 : 	 * 
+28 : 	 * @param fileName
+29 : 	 * @return
+30 : 	 * @throws IOException
+31 : 	 *             缓冲输入文件：如果要打开文件作为字符输入，可以用FileInputReader。 为了提高速度，可以对这个文件实行缓冲，用
+32 : 	 *             BufferedReader readLine()方法
+33 : 	 */
+34 : 	public static String readFromFile(String fileName) throws IOException {
+35 : 		BufferedReader br = new BufferedReader(new FileReader(fileName));
+36 : 		String temp;
+37 : 		StringBuilder sb = new StringBuilder();
+38 : 		while ((temp = br.readLine()) != null) {
+39 : 			sb.append(temp + "\n");
+40 : 		}
+41 : 		br.close();
+42 : 		return sb.toString();
+43 : 	}
+44 : 
+45 : 	/**
+46 : 	 * 
+47 : 	 * @throws IOException
+48 : 	 *             StringReader 从内存输入
+49 : 	 */
+50 : 
+51 : 	public static void readFromRAM() throws IOException {
+52 : 		StringReader sr = new StringReader(readFromFile(fileName));
+53 : 		int c;
+54 : 		while ((c = sr.read()) != -1) {
+55 : 			System.out.println((char) c);
+56 : 		}
+57 : 	}
+58 : 
+59 : 	/**
+60 : 	 * 
+61 : 	 * @throws IOException
+62 : 	 * 
+63 : 	 * 利用 BufferedWriter 向目标写入内容
+64 : 	 * 它被装饰成 PrintWriter
+65 : 	 */
+66 : 	
+67 : 	public static void writeToFile() throws IOException {
+68 : 		BufferedReader br = new BufferedReader(new StringReader(
+69 : 				readFromFile(fileName)));
+70 : 		PrintWriter pw = new PrintWriter(aimFileName);
+71 : 		int lineCount = 1;
+72 : 		String temp;
+73 : 		while ((temp = br.readLine()) != null) {
+74 : 			pw.println(lineCount++ + " : " + temp);
+75 : 		}
+76 : 
+77 : 		pw.close();
+78 : 		
+79 : 		System.out.println(readFromFile(aimFileName));
+80 : 	}
+81 : 
+82 : 	
+83 : 	
+84 : }
