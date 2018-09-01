@@ -34,8 +34,8 @@ public class QuickSortDemo extends ArrayResource {
 		// TODO Auto-generated method stub
 		int array[] = { 49, 38, 65, 97, 76, 13, 27, 49 };
 		QuickSortDemo demo = new QuickSortDemo();
-		// demo.quickSort(array, 0, array.length - 1);
-		demo.quickSortImprove(array, 0, array.length - 1);
+		 demo.quickSort(array, 0, array.length - 1);
+		//demo.quickSortImprove(array, 0, array.length - 1);
 		printArray(array);
 	}
 
