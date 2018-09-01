@@ -5,36 +5,21 @@
 
 	<!-- default-lazy-init="true" 将bean对象初始化延迟到getBean(),而不是容器启动时自动初始化 -->
 
-  	<!-- 
-        目的：使用spring的ioc技术管理LoginAction、UserDaoImpl
-            实现被动注入
-        被动注入前提：两个对象都需要交由ioc容器管理
-        init-method:在bean初始化时自动执行
-        property:setter方法注入
-        constructor-arg : 为当前调用的构造器赋值
-                    index值为构造器第几个参数
-        ref: 表示赋值的类型为自定义的类型（引用）
-        value: 为String 、 基本数据类型、 class类型赋值
-        lookup-method  : 方法注入，bean值为要注入的对象， name为方法名
-        scope : singleton 单例
-                prototype 原型
-                request   ioc实例化的bean对象存储在request还是在session范围内，这两个取值仅在web环境下 
-                session
-    -->
-<!-- *********************************************start********************************************************************************************* -->
-	<bean id="action" class="com.lidong.spring.pratice2.LoginAction" init-method="init" lazy-init="true" scope="singleton">
-		<lookup-method name="etoak" bean="dao"/> <!-- 方法注入 -->
+	<!-- 目的：使用spring的ioc技术管理LoginAction、UserDaoImpl 实现被动注入 被动注入前提：两个对象都需要交由ioc容器管理 
+		init-method:在bean初始化时自动执行 property:setter方法注入 constructor-arg : 为当前调用的构造器赋值 
+		index值为构造器第几个参数 ref: 表示赋值的类型为自定义的类型（引用） value: 为String 、 基本数据类型、 class类型赋值 
+		lookup-method : 方法注入，bean值为要注入的对象， name为方法名 scope : singleton 单例 prototype 
+		原型 request ioc实例化的bean对象存储在request还是在session范围内，这两个取值仅在web环境下 session -->
+	<bean id="action" class="com.lidong.spring.pratice2.LoginAction"
+		init-method="init" lazy-init="true" scope="singleton">
+		<lookup-method name="etoak" bean="dao" /> <!-- 方法注入 -->
 	</bean>
 	<bean id="dao" class="com.lidong.spring.pratice2.UserDao"></bean>
-<!-- *********************************************end*****************************************************************************************&&**** -->
-<!-- *********************************************start********************************************************************************************* -->
 	<bean id="helloworld"
 		class="com.lidong.spring.helloworld.HelloWorld">
 		<property name="name" value="sjf0115"></property>
 		<property name="age" value="18"></property>
 	</bean>
-<!-- *********************************************end*********************************************************************************************** -->
-<!-- *********************************************start********************************************************************************************* -->
 	<bean id="userDao4MySqlImpl"
 		class="com.lidong.spring.pratice1.UserDao4MySqlImpl" />
 	<bean id="userDao4OracleImpl"
@@ -44,52 +29,85 @@
 		<property name="userDao" ref="userDao4OracleImpl"></property>
 		<!-- <property name="userDao" ref="userDao4OracleImpl"></property> -->
 	</bean>
-<!-- *********************************************end*********************************************************************************************** -->
 
-<!-- *********************************************start********************************************************************************************* -->
-   <!-- 使用ioc依赖注入实现LoginAction、UserDaoIf依赖关系 -->
-   <bean id="action3" class="com.lidong.spring.pratice3.LoginAction">
-       <property name="dao" ref="factory"></property>
-   </bean>
-      <!-- 
-                1 静态工厂 ~ 工厂模式
-            factory-method ： 指向工厂类中提供的静态方法
-                a  ioc容器会将具备改属性的bean当作工厂bean对待
-                b  调用这个工厂bean时，返回的对象实例不在是class属性指向的对象类型
-                    而是该工厂自动调用factory-method属性指向的方法（必须是静态的）返回的对象类型
-                    所以这里getBean()得到的是UserDaoIf对象
-        2 动态工厂(忽略)
-      -->
-   <bean id="factory" class="com.lidong.spring.pratice3.DaoFactory" factory-method="getDao"></bean>
-    <!-- 
-        3 FactoryBean接口
-            (UserDaoIf)getBean("fb")
-            ioc容器会将所有实现了FactoryBean接口的类作为工厂bean对象
-        调用工厂bean时返回的对象实例 是 该工厂自动调用其getObject()返回的对象实例
-       -->
-   <bean id="fb" class="com.lidong.spring.pratice3.DaoFactoryBean"></bean>
-<!-- *********************************************end*********************************************************************************************** -->
+	<!-- 使用ioc依赖注入实现LoginAction、UserDaoIf依赖关系 -->
+	<bean id="action3" class="com.lidong.spring.pratice3.LoginAction">
+		<property name="dao" ref="factory"></property>
+	</bean>
+	<!-- 1 静态工厂 ~ 工厂模式 factory-method ： 指向工厂类中提供的静态方法 a ioc容器会将具备改属性的bean当作工厂bean对待 
+		b 调用这个工厂bean时，返回的对象实例不在是class属性指向的对象类型 而是该工厂自动调用factory-method属性指向的方法（必须是静态的）返回的对象类型 
+		所以这里getBean()得到的是UserDaoIf对象 2 动态工厂(忽略) -->
+	<bean id="factory" class="com.lidong.spring.pratice3.DaoFactory"
+		factory-method="getDao"></bean>
+	<!-- 3 FactoryBean接口 (UserDaoIf)getBean("fb") ioc容器会将所有实现了FactoryBean接口的类作为工厂bean对象 
+		调用工厂bean时返回的对象实例 是 该工厂自动调用其getObject()返回的对象实例 -->
+	<bean id="fb" class="com.lidong.spring.pratice3.DaoFactoryBean"></bean>
 
 
-<!-- *********************************************start********************************************************************************************* -->
-	  <!-- 
-        将CityDaoImpl、JdbcTemplate配置成ioc容器中的bean.
-     -->
+	<!-- 将CityDaoImpl、JdbcTemplate配置成ioc容器中的bean. -->
 	<bean id="dao4" class="com.lidong.spring.pratice4.CityDaoImpl">
-	    <property name="jt" ref="jt"></property>
+		<property name="jt" ref="jt"></property>
 	</bean>
 	<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
-        <property name="dataSource" ref="ds"></property>
-    <!--
-        提供datasource数据源[接口] ~ bean  
-            spring 内置了一个dataSource实现类DriverManageDataSource
-     -->
-    </bean>
-	    <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-        <property name="url" value="jdbc:mysql://localhost:3306/LiDongTest1"></property>
-        <property name="username" value="root"></property>
-        <property name="password" value="root"></property>
-    </bean>
-<!-- *********************************************end*********************************************************************************************** -->
+		<property name="dataSource" ref="ds"></property>
+		<!-- 提供datasource数据源[接口] ~ bean spring 内置了一个dataSource实现类DriverManageDataSource -->
+	</bean>
+	<bean id="ds"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="com.mysql.jdbc.Driver"></property>
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/LiDongTest1"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="root"></property>
+	</bean>
+
+
+	<bean id="bean3Factory"
+		class="com.ldddd.spring.spring1.bean.Bean1Factory"></bean>
+	<bean id="bean1" factory-bean="bean3Factory"
+		factory-method="getBean3"></bean>
+
+	<bean id="userDao" class="com.ldddd.spring.spring1.ioc.UserDao"></bean>
+	<bean id="userService"
+		class="com.ldddd.spring.spring1.ioc.UserService">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+
+	<bean id="person" class="com.ldddd.spring.spring1.property.Person">
+		<!-- 数组 -->
+		<property name="arrs">
+			<list>
+				<value>A小王</value>
+				<value>A小马</value>
+				<value>A小宋</value>
+			</list>
+		</property>
+		<!-- list -->
+		<property name="list">
+			<list>
+				<value>B小奥</value>
+				<value>B小金</value>
+				<value>B小普</value>
+			</list>
+		</property>
+		<!-- map -->
+		<property name="map">
+			<map>
+				<entry key="aa" value="lucy"></entry>
+				<entry key="bb" value="mary"></entry>
+				<entry key="cc" value="tom"></entry>
+			</map>
+		</property>
+		<!-- properties -->
+		<property name="properties">
+			<props>
+				<prop key="driverclass">com.mysql.jdbc.Driver</prop>
+				<prop key="username">root</prop>
+			</props>
+		</property>
+
+	</bean>
+
+
 </beans>

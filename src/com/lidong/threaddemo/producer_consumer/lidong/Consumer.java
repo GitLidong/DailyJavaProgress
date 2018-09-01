@@ -1,4 +1,4 @@
-package com.lidong.threaddemo.producer_consumer;
+package com.lidong.threaddemo.producer_consumer.lidong;
 
 import java.util.Vector;
 import java.util.logging.Level;

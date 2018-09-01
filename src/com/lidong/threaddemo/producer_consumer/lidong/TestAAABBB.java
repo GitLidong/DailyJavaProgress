@@ -1,4 +1,4 @@
-package com.lidong.threaddemo.producer_consumer;
+package com.lidong.threaddemo.producer_consumer.lidong;
 
 //这里使用static obj作为锁的对象，当线程Produce启动时（假如Produce首先获得锁，则Consumer会等待），打印“A”后，会先主动释放锁，然后阻塞自己。
 //Consumer获得对象锁，打印“B”，然后释放锁，阻塞自己，那么Produce又会获得锁，然后...一直循环下去，直到count = 0.这样，
