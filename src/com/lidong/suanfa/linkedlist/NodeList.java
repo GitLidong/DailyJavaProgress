@@ -1,8 +1,9 @@
-package com.lidong.suanfa.res;
+package com.lidong.suanfa.linkedlist;
 
 import java.util.HashSet;
 
 public class NodeList {
+
     public Node head;
     public Node tail;
 
@@ -10,6 +11,27 @@ public class NodeList {
         // TODO Auto-generated constructor stub
         head = null;
         tail = null;
+    }
+
+    public static void main(String[] args) {
+
+        NodeList list = new NodeList();
+
+        for (int i = 1; i <= 15; i++) {
+            list.add(i);
+        }
+//        list.tail.next = list.get(8);
+//        System.out.print("1: ");
+//        System.out.println(list.entryNodeOfLoop1(list) != null ? list.entryNodeOfLoop1(list).data : "");
+//        System.out.print("2: ");
+//        System.out.println(list.entryNodeOfLoop2(list) != null ? list.entryNodeOfLoop2(list).data : "");
+//        System.out.print("3: ");
+//        System.out.println(list.entryNodeOfLoopExist3(list) != null ? list.entryNodeOfLoop(list).data : "");
+
+
+        list.reverseList2(list);
+        list.print();
+
     }
 
     public void add(int data) {
@@ -69,7 +91,6 @@ public class NodeList {
         while (current != null) {
             pos = list.head;
             while (pos != null && pos != current) {
-                System.out.println(current.data + " ,,,,  " + pos.data);
                 if (pos == current.next) {
                     return pos;
                 }
@@ -117,7 +138,6 @@ public class NodeList {
         if (first == null || first.next == null) {
             return null;
         }
-
         Node slow = first;
         Node fast = first;
 
@@ -171,4 +191,44 @@ public class NodeList {
         return null;
     }
 
+
+    /**
+     * // 1.就地反转法
+     *
+     * @param list
+     */
+    public void reverse(NodeList list) {
+        if (list.head == null) {
+            return;
+        }
+
+        Node dummpy = new Node();
+        dummpy.next = list.head;
+        Node pre = dummpy.next;
+        Node current = pre.next;
+
+        while (current != null) {
+            pre.next = current.next;
+            current.next = dummpy.next;
+            dummpy.next = current;
+
+            current = pre.next;
+        }
+        head = dummpy.next;
+    }
+
+
+    // 2.新建链表,头节点插入法
+    public void reverseList2(NodeList list) {
+        Node dummy = new Node();
+        Node pCur = list.head;
+        Node pNex;
+        while (pCur != null) {
+            pNex = pCur.next;
+            pCur.next = dummy.next;
+            dummy.next = pCur;
+            pCur = pNex;
+        }
+        list.head = dummy.next;
+    }
 }

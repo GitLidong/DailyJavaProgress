@@ -256,5 +256,12 @@
     </orderEntry>
     <orderEntry type="library" name="aopalliance-alpha1" level="project" />
     <orderEntry type="library" name="commons-logging-1.2-javadoc" level="project" />
+    <orderEntry type="library" name="aopalliance-alpha1" level="project" />
+    <orderEntry type="library" name="aspectjweaver" level="project" />
+    <orderEntry type="library" name="commons-logging-1.2" level="project" />
+    <orderEntry type="library" name="commons-logging-1.2-javadoc" level="project" />
+    <orderEntry type="library" name="junit-4.10" level="project" />
+    <orderEntry type="library" name="mybatis-3.4.6" level="project" />
+    <orderEntry type="library" name="aopalliance-alpha11" level="project" />
   </component>
 </module>

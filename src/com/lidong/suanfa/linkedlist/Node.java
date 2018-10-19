@@ -1,8 +1,11 @@
-package com.lidong.suanfa.res;
+package com.lidong.suanfa.linkedlist;
 
 public class Node {
 	public int data;
 	public Node next;
+
+	public Node() {
+	}
 
 	public Node(int data) {
 		// TODO Auto-generated constructor stub

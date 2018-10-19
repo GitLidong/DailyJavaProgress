@@ -2,13 +2,13 @@ package com.lidong.suanfa;
 
 import java.util.Stack;
 
-import com.lidong.suanfa.res.Node;
-import com.lidong.suanfa.res.NodeList;
+import com.lidong.suanfa.linkedlist.Node;
+import com.lidong.suanfa.linkedlist.NodeList;
 
 public class ReverseNode {
 
 	/**
-	 * 
+	 *
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -19,15 +19,14 @@ public class ReverseNode {
 		}
 
 		ReverseNode demo = new ReverseNode();
-		demo.recNode(list.head);
+		//demo.recNode(list.head);
 		// demo.reverseNode1(list.head);
-
 		/// demo.recNode(list.tail);
 	}
 
 	/**
 	 * 递归
-	 * 
+	 *
 	 * @param node
 	 */
 	public void recNode(Node node) {

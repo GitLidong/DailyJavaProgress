@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="aopalliance-alpha1">
+  <library name="mybatis-3.4.6">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/aopalliance-alpha1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mybatis-3.4.6.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
