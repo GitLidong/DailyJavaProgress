@@ -1,4 +1,4 @@
-package com.lidong.tree.binarytree;
+package com.lidong.tree.binarytree2;
 
 public class TreeNode<T> {
 
