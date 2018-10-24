@@ -1,11 +1,13 @@
 package com.lidong.xml.sax;
 
+import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import jdk.internal.org.xml.sax.Attributes;
-import jdk.internal.org.xml.sax.SAXException;
-import jdk.internal.org.xml.sax.helpers.DefaultHandler;
+
 
 public class XmlParseHandler extends DefaultHandler {
 
