@@ -10,6 +10,24 @@ import com.lidong.threaddemo.producer_consumer.publicInte.AbstractProducer;
 import com.lidong.threaddemo.producer_consumer.publicInte.Model;
 import com.lidong.threaddemo.producer_consumer.publicInte.Task;
 
+/**
+ * 
+ * @author Dong
+ *
+ *         WaitNotifyModel 和 LockConditionModel 效率明显低于实现一，并发瓶颈很明显， 因为在锁
+ *         BUFFER_LOCK 看来，任何消费者线程与生产者线程都是一样的。
+ *         换句话说，同一时刻，最多只允许有一个线程（生产者或消费者，二选一）操作缓冲区 buffer。
+ *
+ *         而实际上，如果缓冲区是一个队列的话， “生产者将产品入队”与“消费者将产品出队”两个操作之间没有同步关系，
+ *         可以在队首出队的同时，在队尾入队。理想性能可提升至两倍。
+ *
+ *
+ *         那么思路就简单了：需要两个锁 CONSUME_LOCK与PRODUCE_LOCK， CONSUME_LOCK控制消费者线程并发出队，
+ *         PRODUCE_LOCK控制生产者线程并发入队； 相应需要两个条件变量NOT_EMPTY与NOT_FULL，
+ *         NOT_EMPTY负责控制消费者线程的状态（阻塞、运行）， NOT_FULL负责控制生产者线程的状态（阻塞、运行）。
+ *         以此让优化消费者与消费者（或生产者与生产者）之间是串行的；消费者与生产者之间是并行的。
+ */
+
 public class ByLockConditionModelBetter implements Model {
 
 	private final Lock CONSUME_LOCK = new ReentrantLock();

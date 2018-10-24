@@ -1,6 +1,8 @@
 package com.lidong.threaddemo.producer_consumer.publicInte;
 
-public abstract class AbstractConsumer implements Consumer, Runnable {
+public abstract class AbstractConsumer implements Runnable {
+
+	protected abstract void consume() throws InterruptedException;
 
 	@Override
 	public void run() {
