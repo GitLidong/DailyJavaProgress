@@ -1,36 +1,21 @@
 package com.lidong.shejimoshi.BuilderPattern;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Product {
-	private String partOne;
-	private String partTwo;
-	private String partThree;
+	protected List<String> parts = new ArrayList<>();
 
-	@Override
-	public String toString() {
-		return "product:" + partOne + partTwo + partThree;
+	// 添加部件
+	public void add(String part) {
+		parts.add(part);
 	}
 
-	public String getPartOne() {
-		return partOne;
-	}
-
-	public void setPartOne(String partOne) {
-		this.partOne = partOne;
-	}
-
-	public String getPartTwo() {
-		return partTwo;
-	}
-
-	public void setPartTwo(String partTwo) {
-		this.partTwo = partTwo;
-	}
-
-	public String getPartThree() {
-		return partThree;
-	}
-
-	public void setPartThree(String partThree) {
-		this.partThree = partThree;
+	// 显示产品信息
+	public void show() {
+		System.out.print("产品部件信息：");
+		for (String part : parts) {
+			System.out.print(part + "\t");
+		}
 	}
 }

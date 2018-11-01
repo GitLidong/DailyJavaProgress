@@ -51,29 +51,6 @@ class VideoConference implements Runnable {
 		}
 
 	}
-
-	class SimlockBlob {
-		private String Version;
-		private String Configuration;
-		private String MaxAttempts;
-		private String TestIMSI;
-		private String IMSI;
-		private String Customization;
-		private String AutolockStates;
-		private String Categories;
-		private String Network;
-		private String NetworkSub;
-		private String Service;
-		private String Corporate;
-
-		@Override
-		public String toString() {
-			// TODO Auto-generated method stub
-			return "Version:" + "\nConfiguration:" + "\nMax Attempts:" + "\nTestIMSI:" + "\nIMSI:" + "\nCustomization:"
-					+ "\nAutolock states:" + "\nCategories:" + "\nNetwork:" + "\nNetworkSub:" + "\nService:"
-					+ "\nCorporate:";
-		}
-	}																																											
 }
 
 class Participant implements Runnable {

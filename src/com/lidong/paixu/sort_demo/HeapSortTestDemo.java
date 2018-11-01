@@ -2,7 +2,7 @@ package com.lidong.paixu.sort_demo;
 
 import com.lidong.paixu.ArrayResource;
 
-public class HeapSortTestDemo extends ArrayResource{
+public class HeapSortTestDemo extends ArrayResource {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -40,8 +40,6 @@ public class HeapSortTestDemo extends ArrayResource{
 			}
 		}
 		array[parent] = temp; // 被调整的结点的值放人最终位置
-		
-		printArray(array);
 	}
 
 	// 堆排序
@@ -55,6 +53,29 @@ public class HeapSortTestDemo extends ArrayResource{
 		}
 		System.out.print("After heap Sort: ");
 		return array;
+	}
+
+	private void ldBuildMaxHeap(int[] data) {
+		for (int i = (data.length - 1 - 1) / 2; i >= 0; i--) {
+			adjudtDownToTop(data, i, data.length);
+		}
+	}
+
+	private void ldAdjustDownToUp(int[] data, int parent, int length) {
+		int temp = data[parent];
+		for (int i = 2 * parent + 1; i < length - 1; i = i * 2 + 1) {
+			if (i + 1 < length && data[i + 1] > data[i]) {
+				i++;
+			}
+
+			if (temp > data[i]) {
+				break;
+			} else {
+				data[parent] = data[i];
+				parent = i;
+			}
+		}
+		data[parent] = temp;
 	}
 
 }

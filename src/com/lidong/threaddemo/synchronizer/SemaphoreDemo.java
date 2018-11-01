@@ -12,43 +12,40 @@ import java.util.concurrent.Semaphore;
 
 public class SemaphoreDemo {
 
-	
 	public static void main(String[] args) {
 		int machineNum = 5;
 		int people = 18;
 		Semaphore semaphore = new Semaphore(machineNum);
-		for (int i = 0; i<people; i++) {
-			new Worker(i+1, semaphore).start();
+		for (int i = 0; i < people; i++) {
+			new Worker(i + 1, semaphore).start();
 		}
 	}
-	
-	
-	
+
 	static class Worker extends Thread {
-		
+
 		private int num;
 		private Semaphore semaphore;
-		
+
 		public Worker(int num, Semaphore semaphore) {
 			this.num = num;
 			this.semaphore = semaphore;
 		}
-		
+
 		@Override
 		public void run() {
 			// TODO Auto-generated method stub
 			try {
 				semaphore.acquire();
-				System.out.println("工人"+this.num+"占用一个机器在生产...");
+				System.out.println("工人" + this.num + "占用一个机器在生产...");
 				Thread.sleep(2000);
-				System.out.println("工人"+this.num+"释放出机器");
+				System.out.println("工人" + this.num + "释放出机器");
 				semaphore.release();
-				
+
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
 	}
-	
+
 }

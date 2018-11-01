@@ -29,7 +29,7 @@ public class NodeList {
 //        System.out.println(list.entryNodeOfLoopExist3(list) != null ? list.entryNodeOfLoop(list).data : "");
 
 
-        list.reverseList2(list);
+        list.reverse(list);
         list.print();
 
     }
@@ -208,6 +208,7 @@ public class NodeList {
         Node current = pre.next;
 
         while (current != null) {
+        	System.out.println(pre.data+" , "+current.data);
             pre.next = current.next;
             current.next = dummpy.next;
             dummpy.next = current;

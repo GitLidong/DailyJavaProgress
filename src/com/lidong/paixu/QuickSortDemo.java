@@ -26,7 +26,7 @@ package com.lidong.paixu;
 
 快速排序是一个不稳定的排序方法。
 
-
+-
 */
 
 public class QuickSortDemo extends ArrayResource {
@@ -34,8 +34,9 @@ public class QuickSortDemo extends ArrayResource {
 		// TODO Auto-generated method stub
 		int array[] = { 49, 38, 65, 97, 76, 13, 27, 49 };
 		QuickSortDemo demo = new QuickSortDemo();
-		 demo.quickSort(array, 0, array.length - 1);
-		//demo.quickSortImprove(array, 0, array.length - 1);
+		// demo.quickSort(array, 0, array.length - 1);
+		// demo.quickSortImprove(array, 0, array.length - 1);
+		demo.lidongQuickSordemo(array, 0, array.length - 1);
 		printArray(array);
 	}
 
@@ -88,6 +89,42 @@ public class QuickSortDemo extends ArrayResource {
 			}
 			array[j] = aim;
 		}
+	}
+
+	// 0，（ 49） 38 65 97 76 13 27 （49）
+	// 1， 49 38 （27） 97 76 13 （65） 49
+	// 2， 49 38 27 （13） 76 （97） 65 49
+	// 3， 13 38 27 （49) 76 97 65 49
+	
+	// 4， (13) 38 27 (49) 76 49 65 97
+	// 5, 13 27 38 49 65 49 76 97
+	// 6, 13 27 49 49 65 76 97 
+	
+	private void lidongQuickSordemo(int[] array, int left, int right) {
+		int i, j, temp, base;
+		if (left > right) {
+			return;
+		}
+		base = array[left];
+		i = left;
+		j = right;
+		while (i != j) {
+			while (array[j] >= base && j > i) {
+				j--;
+			}
+			while (array[i] <= base && j > i) {
+				i++;
+			}
+			if (i < j) {
+				temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+		}
+		array[left] = array[i];
+		array[i] = base;
+		lidongQuickSordemo(array, left, i - 1);
+		lidongQuickSordemo(array, i + 1, right);
 	}
 
 }

@@ -2,9 +2,8 @@ package com.lidong.paixu;
 
 /**
  * 
- * @author LiDong
- * 基本思想：归并（Merge）排序法是将两个（或两个以上）有序表合并成一个新的有序表，
- * 即把待排序序列分为若干个子序列，每个子序列是有序的。然后再把有序子序列合并为整体有序序列。
+ * @author LiDong 基本思想：归并（Merge）排序法是将两个（或两个以上）有序表合并成一个新的有序表，
+ *         即把待排序序列分为若干个子序列，每个子序列是有序的。然后再把有序子序列合并为整体有序序列。
  *
  */
 
@@ -34,13 +33,13 @@ public class MergeSortDemo extends ArrayResource {
 			return;
 		}
 		int center = (left + right) / 2;
-		System.out.println(left+"  "+center+"  "+right);
 		sort(array, left, center);
 		sort(array, center + 1, right);
 		merge(array, left, center, right);
 	}
 
 	private void merge(int[] array, int left, int center, int right) {
+		System.out.println("merge left , center , right :" + left + " , " + center + " , " + right);
 		int[] tempArray = new int[array.length]; // 临时数组
 		int indexLeft = left; // 缓存左数组第一个元素的索引
 		int indexRight = center + 1; // 右数组第一个元素索引

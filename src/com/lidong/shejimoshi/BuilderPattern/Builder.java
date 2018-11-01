@@ -1,11 +1,11 @@
 package com.lidong.shejimoshi.BuilderPattern;
 
-public abstract class Builder {
-	public abstract void buildPartOne();
+public interface Builder {
+	public void buildCPU(); // CUP
 
-	public abstract void buildPartTwo();
+	public void buildMemory(); // 内存
 
-	public abstract void buildPartThree();
+	public void buildDisplayCard(); // 显卡
 
-	public abstract Product retrieveResult();
+	public Product getFinalResult();// 最终产品
 }
