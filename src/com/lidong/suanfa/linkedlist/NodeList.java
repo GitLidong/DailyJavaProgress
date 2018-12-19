@@ -201,14 +201,12 @@ public class NodeList {
         if (list.head == null) {
             return;
         }
-
         Node dummpy = new Node();
         dummpy.next = list.head;
         Node pre = dummpy.next;
         Node current = pre.next;
-
         while (current != null) {
-        	System.out.println(pre.data+" , "+current.data);
+            System.out.println(pre.data + " , " + current.data);
             pre.next = current.next;
             current.next = dummpy.next;
             dummpy.next = current;

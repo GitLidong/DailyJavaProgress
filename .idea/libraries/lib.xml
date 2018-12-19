@@ -29,6 +29,7 @@
       <root url="jar://$PROJECT_DIR$/lib/spring-webflux-5.0.8.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/spring-web-5.0.8.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/junit-4.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javax.annotation.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -1,4 +1,4 @@
-package com.lidong.iodemo;
+package com.lidong.io_demo;
 
 import java.io.BufferedReader;
 import java.io.File;

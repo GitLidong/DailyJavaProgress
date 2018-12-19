@@ -5,18 +5,19 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Othresssssss {
 
     public static void main(String[] args) {
+        String s1 = "ab" + "cd";
+        String s2 = "abc" + "d";
+
+        System.out.println(s1 == s2);
+
+
         // String str = "北京市(朝阳区)(西城区)(海淀区)";
         // Pattern p = Pattern.compile(".*?(?=\\()");
         // Matcher m = p.matcher(str);
@@ -59,7 +60,6 @@ public class Othresssssss {
         // while(iterator.hasNext()) {
         // System.out.println(iterator.next());
         // }
-
         // HashMap<String, Integer> map = new HashMap<>(2);
         // map.put("1", 1);
         // map.put("2", 2);

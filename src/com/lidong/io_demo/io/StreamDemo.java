@@ -1,4 +1,4 @@
-package com.lidong.iodemo.io;
+package com.lidong.io_demo.io;
 
 import java.io.IOException;
 import java.nio.file.Files;

@@ -1,4 +1,4 @@
-package com.lidong.iodemo.io;
+package com.lidong.io_demo.io;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -15,7 +15,7 @@ import java.io.StringReader;
 
 public class BufferedInputFile {
 
-	public static String fileName = "src/com/lidong/iodemo/io/BufferedInputFile.java";
+	public static String fileName = "src/com/lidong/io_demo/io/BufferedInputFile.java";
 	public static String aimFileName = "resource/BufferedWriter.txt";
 	public static String aimFileName2 = "resource/DataOutputStream.txt";
 	public static String aimFileName3 = "resource/RandomAccessFile.txt";
