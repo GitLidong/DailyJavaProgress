@@ -1,5 +1,10 @@
 package com.lidong.suanfa;
 
+/**
+ * 给定整数数组，以及一个数，找出该数组中相加等于该数的两个数
+ */
+
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;

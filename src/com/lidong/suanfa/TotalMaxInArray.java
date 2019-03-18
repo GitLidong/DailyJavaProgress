@@ -1,11 +1,15 @@
 package com.lidong.suanfa;
 
+/**
+ * 打印出数组中相加最大的连续整数
+ */
+
 public class TotalMaxInArray {
 
     public static void main(String[] args) throws Exception {
 
-        int[] datas = {1, -2, 3, 10, -4, 7, 2, -5};
-        System.out.println(totalMax(datas, datas.length));
+        int[] data = {1, -2, 3, 10, -4, 7, 2, -5};
+        System.out.println(totalMax(data, data.length));
     }
 
     private static int totalMax(int[] datas, int size) throws Exception {
@@ -34,4 +38,5 @@ public class TotalMaxInArray {
         }
         return max;
     }
+
 }
