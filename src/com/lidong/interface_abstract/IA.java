@@ -3,7 +3,7 @@ package com.lidong.interface_abstract;
 public interface IA {
 
     String Iinfo = "IA";
-    Othres Iothers = new Othres();
+    Othres IAothers = new Othres();
 
     void IAInof();
 

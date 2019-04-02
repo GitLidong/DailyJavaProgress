@@ -2,69 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3194750a-6cc6-4e59-b588-0ddb4f1bcd49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/asm-7.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/cglib-3.2.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lidong/ZALUAN/CompareTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lidong/interface_abstract/huidiao/ClassA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lidong/interface_abstract/huidiao/ClassB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lidong/interface_abstract/huidiao/ICallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lidong/proxy/MyInvocationHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lidong/proxy/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lidong/proxy/ProxyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lidong/proxy/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lidong/proxy/cglib/SampleClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/LinkedListSUm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/RedPacket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/chazhao/BFPRT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/tree/binarytree/BinaryTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lidong/threaddemo/ThreadTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/lidong/threaddemo/deadlock/DeadLock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/lidong/ZALUAN/TestEquaks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/lidong/fanxing/Apple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/lidong/fanxing/Fruit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/lidong/fanxing/Orange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/lidong/fanxing/Plate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/lidong/fanxing/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/lidong/interface_abstract/AAA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/lidong/interface_abstract/IAA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/lidong/jicheng/Parent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/lidong/jicheng/Son.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/lidong/socketdemo/MyClientTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/lidong/socketdemo/MyServerSocket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/MaoPuSuShu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/chazhao/BinarySearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/chazhao/KMP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/QiuckSortDemoByStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/lidong/threaddemo/XieZuoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyJavaProgress.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DailyJavaProgress.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DailyJavaProgress/com/lidong/paixu/Note.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/ZALUAN/BinaryNode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/ZALUAN/Helloworld.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/ZALUAN/RedPacket.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/internet/ThreadEchoHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/internet/ThreadEchoHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/ArrayResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/ArrayResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/BubbleSortDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/BubbleSortDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/CountingSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/CountingSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/HeapSortDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/HeapSortDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/MergeSortDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/MergeSortDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/Note.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/Note.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/QuickSortDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/QuickSortDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/ShellSortDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/ShellSortDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/SimpleSelectionSortDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/SimpleSelectionSortDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/StraigthInsertSortDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/StraigthInsertSortDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/sort2/DirectInsertionDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/sort2/DirectInsertionDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/sort2/DirectSelectionDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/sort2/DirectSelectionDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/sort2/HeapSortDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/sort2/HeapSortDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/sort2/ShellSortDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/sort2/ShellSortDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/sort2/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/sort2/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/sort_demo/BubbleDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/sort_demo/BubbleDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/sort_demo/BucketSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/sort_demo/BucketSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/sort_demo/HeapSortDemo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/sort_demo/HeapSortDemo2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/sort_demo/HeapSortTestDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/sort_demo/HeapSortTestDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/sort_demo/MergeSortDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/sort_demo/MergeSortDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/sort_demo/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/sort_demo/QuickSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/sort_demo/QuickSortDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/sort_demo/QuickSortDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/sort_demo/RadixSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/sort_demo/RadixSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/sort_demo/SelectSortDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/sort_demo/SelectSortDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/sort_demo/ShellSortDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/sort_demo/ShellSortDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/sort_demo/SimpleSelectSortDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/sort_demo/SimpleSelectSortDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/paixu/sort_demo/StraightInsertionSortDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/sort_demo/StraightInsertionSortDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/suanfa/TotalMaxInArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/TotalMaxInArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/suanfa/TwoSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/TwoSum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/threaddemo/CallableDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/threaddemo/CallableDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/tree/Binarytree/CompleteBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/tree/CompleteBinaryTree/CompleteBinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/tree/Binarytree/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/tree/CompleteBinaryTree/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/tree/Binarytree/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/tree/CompleteBinaryTree/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/tree/Binarytree/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/tree/CompleteBinaryTree/Tree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/tree/binarytree2/BinaryTree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lidong/tree/binarytree2/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/tree/binarytree/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lidong/ZALUAN/HappyNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/HappyNum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lidong/ZALUAN/Othresssssss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/ZALUAN/Othresssssss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lidong/ZALUAN/QuickSortDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lidong/interface_abstract/AA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/interface_abstract/AA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lidong/interface_abstract/AADomin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/interface_abstract/AADomin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lidong/interface_abstract/IA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/interface_abstract/IA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lidong/io_demo/io/BufferedInputFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/io_demo/io/BufferedInputFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lidong/io_demo/nio/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/io_demo/nio/ReadFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lidong/io_demo/nio/SocketChannelDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/io_demo/nio/SocketChannelDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lidong/socket/SocketDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lidong/socket/ThreadEchoHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lidong/socketdemo/EchoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/socketdemo/EchoServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/HeapSortDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/HeapSortDemo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,20 +43,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/lidong/internet/SocketDemo.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/lidong/jicheng/Parent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="52" />
+            <state relative-caret-position="340">
+              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+              <folding>
+                <element signature="e#125#126#0" expanded="true" />
+                <element signature="e#161#162#0" expanded="true" />
+                <element signature="e#213#214#0" expanded="true" />
+                <element signature="e#262#263#0" expanded="true" />
+                <element signature="e#344#345#0" expanded="true" />
+                <element signature="e#380#381#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/lidong/internet/ThreadEchoHandler.java">
+        <entry file="file://$PROJECT_DIR$/src/com/lidong/jicheng/Son.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+            <state relative-caret-position="260">
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+              <folding>
+                <element signature="e#147#148#0" expanded="true" />
+                <element signature="e#183#184#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/lidong/interface_abstract/AADomin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+              <folding>
+                <element signature="e#356#357#0" expanded="true" />
+                <element signature="e#439#440#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,11 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/lidong/tree/binarytree2/BinaryTree.java" />
-        <option value="$PROJECT_DIR$/src/com/lidong/ZALUAN/Helloworld.java" />
-        <option value="$PROJECT_DIR$/src/com/lidong/ZALUAN/HelloWorld.java" />
-        <option value="$PROJECT_DIR$/src/com/lidong/suanfa/tree/binarytree2/BinaryTree.java" />
-        <option value="$PROJECT_DIR$/src/com/lidong/suanfa/tree/CompleteBinaryTree/CompleteBinaryTree.java" />
         <option value="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/MergeSortDemo.java" />
         <option value="$PROJECT_DIR$/src/com/lidong/suanfa/chazhao/BFPRT.java" />
         <option value="$PROJECT_DIR$/src/com/lidong/suanfa/LinkedListSUm.java" />
@@ -134,24 +122,53 @@
         <option value="$PROJECT_DIR$/src/com/lidong/suanfa/TwoSum.java" />
         <option value="$PROJECT_DIR$/src/com/lidong/suanfa/RedPacket.java" />
         <option value="$PROJECT_DIR$/src/com/lidong/suanfa/TotalMaxInArray.java" />
-        <option value="$PROJECT_DIR$/src/com/lidong/ZALUAN/CompareTest.java" />
         <option value="$PROJECT_DIR$/src/com/lidong/threaddemo/CallableDemo.java" />
         <option value="$PROJECT_DIR$/src/com/lidong/internet/ThreadEchoHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/socket/ThreadEchoHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/io_demo/io/BufferedInputFile.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/io_demo/nio/SocketChannelDemo.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/socketdemo/EchoServer.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/io_demo/nio/ReadFile.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/ZALUAN/CompareTest.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/ZALUAN/TestEquaks.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/suanfa/MaoPuSuShu.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/suanfa/HappyNum.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/suanfa/chazhao/BinarySearch.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/threaddemo/XieZuoTest.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/ZALUAN/Othresssssss.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/HeapSortDemo.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/suanfa/paixu/QiuckSortDemoByStack.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/suanfa/chazhao/KMP.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/socketdemo/MyServerSocket.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/interface_abstract/IA.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/interface_abstract/huidiao/AAA.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/interface_abstract/IAA.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/interface_abstract/AAA.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/interface_abstract/AA.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/interface_abstract/AADomin.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/fanxing/Fruit.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/fanxing/Apple.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/fanxing/Orange.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/fanxing/Plate.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/fanxing/Test.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/jicheng/Parent.java" />
+        <option value="$PROJECT_DIR$/src/com/lidong/jicheng/Son.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="802" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -183,42 +200,20 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="lidong" type="462c0819:PsiDirectoryNode" />
-              <item name="internet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DailyJavaProgress" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DailyJavaProgress" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="lidong" type="462c0819:PsiDirectoryNode" />
-              <item name="threaddemo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DailyJavaProgress" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DailyJavaProgress" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="lidong" type="462c0819:PsiDirectoryNode" />
-              <item name="threaddemo" type="462c0819:PsiDirectoryNode" />
-              <item name="CallableDemo.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="DailyJavaProgress" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DailyJavaProgress" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
+              <item name="interface_abstract" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552917925336" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554178599115" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -238,13 +233,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SocketDemo">
-    <configuration name="CallableDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lidong.threaddemo.CallableDemo" />
+  <component name="RunManager" selected="Application.Son">
+    <configuration name="AADomin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lidong.interface_abstract.AADomin" />
       <module name="DailyJavaProgress" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lidong.threaddemo.*" />
+          <option name="PATTERN" value="com.lidong.interface_abstract.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -252,12 +247,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompareTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lidong.ZALUAN.CompareTest" />
+    <configuration name="KMP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lidong.suanfa.chazhao.KMP" />
       <module name="DailyJavaProgress" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lidong.ZALUAN.*" />
+          <option name="PATTERN" value="com.lidong.suanfa.chazhao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -265,12 +260,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RedPacket" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lidong.suanfa.RedPacket" />
+    <configuration name="MyServerSocket" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lidong.socketdemo.MyServerSocket" />
       <module name="DailyJavaProgress" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lidong.suanfa.*" />
+          <option name="PATTERN" value="com.lidong.socketdemo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -278,12 +273,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SocketDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lidong.internet.SocketDemo" />
+    <configuration name="Son" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lidong.jicheng.Son" />
       <module name="DailyJavaProgress" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lidong.internet.*" />
+          <option name="PATTERN" value="com.lidong.jicheng.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -291,12 +286,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TotalMaxInArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lidong.suanfa.TotalMaxInArray" />
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lidong.fanxing.Test" />
       <module name="DailyJavaProgress" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lidong.suanfa.*" />
+          <option name="PATTERN" value="com.lidong.fanxing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -306,11 +301,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SocketDemo" />
-        <item itemvalue="Application.CallableDemo" />
-        <item itemvalue="Application.CompareTest" />
-        <item itemvalue="Application.TotalMaxInArray" />
-        <item itemvalue="Application.RedPacket" />
+        <item itemvalue="Application.Son" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.AADomin" />
+        <item itemvalue="Application.MyServerSocket" />
+        <item itemvalue="Application.KMP" />
       </list>
     </recent_temporary>
   </component>
@@ -339,18 +334,34 @@
       <workItem from="1552562890010" duration="3775000" />
       <workItem from="1552821456982" duration="2344000" />
       <workItem from="1552868043878" duration="8942000" />
-      <workItem from="1552917064330" duration="613000" />
+      <workItem from="1552917064330" duration="9934000" />
+      <workItem from="1553041259889" duration="1095000" />
+      <workItem from="1553044795770" duration="31000" />
+      <workItem from="1553079967284" duration="779000" />
+      <workItem from="1553127470409" duration="2000" />
+      <workItem from="1553433557055" duration="648000" />
+      <workItem from="1553490110649" duration="1397000" />
+      <workItem from="1553564885450" duration="1659000" />
+      <workItem from="1553659952077" duration="3703000" />
+      <workItem from="1553846828582" duration="9000" />
+      <workItem from="1553849092189" duration="2462000" />
+      <workItem from="1554168413098" duration="4661000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="com_lidong_suanfa_in_DailyJavaProgress - 2019.03.20 at 08h 21m 13s.xml">
+      <configuration name="com.lidong.suanfa in DailyJavaProgress" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32406000" />
+    <option name="totallyTimeSpent" value="58173000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="802" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="802" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24606581" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24606581" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -359,7 +370,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.3774648" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.50563383" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -387,287 +398,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/ZALUAN/HelloWorld.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/ZALUAN/BinaryNode.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/tree/binarytree/BinaryTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="427" column="5" selection-start-line="427" selection-start-column="5" selection-end-line="427" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/tree/CompleteBinaryTree/Tree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/tree/CompleteBinaryTree/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/tree/CompleteBinaryTree/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/tree/CompleteBinaryTree/CompleteBinaryTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/AppleEat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="29" column="39" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/paixu/QuickSortDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/paixu/MergeSortDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="9" selection-start-line="9" selection-end-line="13" selection-end-column="28" />
-          <folding>
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#694#695#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/paixu/HeapSortDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/innerclass/TimerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-637" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/chazhao/BFPRT.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/LinkedListSUm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="49" column="44" lean-forward="true" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/spring-aop.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="26" column="31" lean-forward="true" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/MinStack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/threaddemo/StopThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/threaddemo/NoVisibility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/threaddemo/deadlock/DeadLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/interface_abstract/huidiao/ClassA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding>
-            <element signature="e#132#133#0" expanded="true" />
-            <element signature="e#168#169#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
-            <element signature="e#528#529#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/interface_abstract/huidiao/ClassB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/interface_abstract/huidiao/ICallback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/proxy/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/proxy/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="73" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
-          <folding>
-            <element signature="e#132#133#0" expanded="true" />
-            <element signature="e#208#209#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/proxy/ProxyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-130">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-          <folding>
-            <element signature="e#138#139#0" expanded="true" />
-            <element signature="e#164#165#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/cglib-3.2.10.jar!/net/sf/cglib/proxy/Enhancer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="101" column="11" selection-start-line="101" selection-start-column="11" selection-end-line="101" selection-end-column="11" />
-          <folding>
-            <element signature="e#4285#4286#0" expanded="true" />
-            <element signature="e#4314#4315#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/proxy/cglib/SampleClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#238#239#0" expanded="true" />
-            <element signature="e#287#288#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/proxy/MyInvocationHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/threaddemo/ThreadTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/others/my_hashmap/MyHashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/ZALUAN/RedPacketDemo.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/TwoSum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-409">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/RedPacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/TotalMaxInArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/util/concurrent/ExecutorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="235" column="18" selection-start-line="235" selection-start-column="18" selection-end-line="235" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/ZALUAN/CompareTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#935#936#0" expanded="true" />
-            <element signature="e#975#976#0" expanded="true" />
-            <element signature="e#780#781#0" expanded="true" />
-            <element signature="e#819#820#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#1193#1194#0" expanded="true" />
-            <element signature="e#1232#1233#0" expanded="true" />
-            <element signature="e#1765#1766#0" expanded="true" />
-            <element signature="e#1813#1814#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/lidong/threaddemo/CallableDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
@@ -678,17 +408,404 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/internet/ThreadEchoHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/socket/ThreadEchoHandler.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/socket/SocketDemo.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/io_demo/nio/SocketChannelDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+        <state relative-caret-position="220">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+          <folding>
+            <element signature="e#642#643#0" expanded="true" />
+            <element signature="e#682#683#0" expanded="true" />
+            <element signature="method#client#0;class#SocketChannelDemo#0" />
+            <element signature="method#server#0;class#SocketChannelDemo#0" />
+            <element signature="method#serverNIO#0;class#SocketChannelDemo#0" />
+            <element signature="method#handleAccept#0;class#SocketChannelDemo#0" />
+            <element signature="method#handleRead#0;class#SocketChannelDemo#0" />
+            <element signature="method#handleWrite#0;class#SocketChannelDemo#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lidong/internet/SocketDemo.java">
+    <entry file="file://$PROJECT_DIR$/resource/gather.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="52" />
+        <state>
+          <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/io_demo/nio/ReadFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-997">
+          <caret line="5" column="37" lean-forward="true" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+          <folding>
+            <element signature="method#readFileIO#0;class#ReadFile#0" />
+            <element signature="method#readFileIOBuffer#0;class#ReadFile#0" />
+            <element signature="method#readBigFileByMappedByteBuffer#0;class#ReadFile#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/ZALUAN/TestEquaks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/ZALUAN/CompareTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/lang/StringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="399" column="19" selection-start-line="399" selection-start-column="19" selection-end-line="399" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/lang/AbstractStringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="1411" column="33" selection-start-line="1411" selection-start-column="33" selection-end-line="1411" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/ZALUAN/StringDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/MaoPuSuShu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/ZALUAN/QuickSortDemo.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/ReverseNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/AppleEat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="29" column="39" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/HappyNum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/LinkedListSUm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="49" column="44" lean-forward="true" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="1924" column="18" selection-start-line="1924" selection-start-column="18" selection-end-line="1924" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/others/AllKindsDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="59" selection-start-line="59" selection-end-line="65" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.classpath">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/chazhao/BinarySearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/util/concurrent/Executors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1306">
+          <caret line="87" column="33" selection-start-line="87" selection-start-column="18" selection-end-line="87" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/threaddemo/XieZuoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/tree/binarytree/BinaryTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1569">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/tree/CompleteBinaryTree/CompleteBinaryTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/TotalMaxInArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/paixu/HeapSortDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="38" column="101" selection-start-line="38" selection-start-column="66" selection-end-line="38" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/ZALUAN/Othresssssss.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/paixu/QiuckSortDemoByStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/paixu/ArrayResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/paixu/QuickSortDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="34" column="57" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/suanfa/chazhao/KMP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <element signature="e#98#99#0" expanded="true" />
+            <element signature="e#165#166#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/socketdemo/MyClientTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/io_demo/io/StreamDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/io_demo/CopyDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/io_demo/io/BufferedInputFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="763">
+          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/socketdemo/EchoServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/socketdemo/MyServerSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/interface_abstract/IA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/interface_abstract/IAA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/interface_abstract/AAA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/interface_abstract/Othres.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/interface_abstract/AA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding>
+            <element signature="e#193#194#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#293#294#0" expanded="true" />
+            <element signature="e#329#330#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/fanxing/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/fanxing/Plate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+          <folding>
+            <element signature="e#96#97#0" expanded="true" />
+            <element signature="e#120#121#0" expanded="true" />
+            <element signature="e#148#149#0" expanded="true" />
+            <element signature="e#172#173#0" expanded="true" />
+            <element signature="e#194#195#0" expanded="true" />
+            <element signature="e#221#222#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/fanxing/Fruit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+          <folding>
+            <element signature="e#78#79#0" expanded="true" />
+            <element signature="e#114#115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/fanxing/Orange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          <folding>
+            <element signature="e#102#103#0" expanded="true" />
+            <element signature="e#130#131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/fanxing/Apple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+          <folding>
+            <element signature="e#102#103#0" expanded="true" />
+            <element signature="e#130#131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/jicheng/Parent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+          <folding>
+            <element signature="e#125#126#0" expanded="true" />
+            <element signature="e#161#162#0" expanded="true" />
+            <element signature="e#213#214#0" expanded="true" />
+            <element signature="e#262#263#0" expanded="true" />
+            <element signature="e#344#345#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/jicheng/Son.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding>
+            <element signature="e#147#148#0" expanded="true" />
+            <element signature="e#183#184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lidong/interface_abstract/AADomin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+          <folding>
+            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#439#440#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

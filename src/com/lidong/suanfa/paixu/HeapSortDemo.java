@@ -15,7 +15,7 @@ public class HeapSortDemo extends ArrayResource {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] array = { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
+			int[] array = { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
 		HeapSortDemo demp = new HeapSortDemo();
 		demp.heapSort(array);
 		printArray(array);
@@ -36,7 +36,7 @@ public class HeapSortDemo extends ArrayResource {
 	// 将元素array[k]自下往上逐步调整树形结构
 	private void adjustDownToUp(int[] array, int parent, int length) {
 		int temp = array[parent];
-		for (int i = 2 * parent + 1; i < length - 1; i = 2 * i + 1) { // i为初始化为节点parent的左孩子，沿节点较大的子节点向下调整
+		for (int i = 2 * parent + 1; i < length; i = 2 * i + 1) { // i为初始化为节点parent的左孩子，沿节点较大的子节点向下调整
 			if ((i + 1) < length && array[i] < array[i + 1]) { // 取节点较大的子节点的下标
 				i++; // 如果节点的右孩子>左孩子，则取右孩子节点的下标
 			}

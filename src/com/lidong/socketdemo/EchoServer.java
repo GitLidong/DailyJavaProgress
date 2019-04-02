@@ -60,7 +60,7 @@ class ClientHandler implements Runnable {
 			boolean done = false;
 			while (!done && scanner.hasNextLine()) {
 				String line = scanner.nextLine();
-				pw.println("Echo: " + line);
+				pw.println("Client Echo: " + line);
 				if (line.trim().equals("BYE")) {
 					done = true;
 				}

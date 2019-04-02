@@ -4,12 +4,16 @@ public abstract class AA {
 
 
     String Ainfo = "AA";
-    Othres othres = new Othres();
+    Othres AAothres = new Othres();
 
     abstract public void AAInfo();
 
     public void AAInfo2() {
-        System.out.println(Ainfo + " , " + othres.othres);
+        System.out.println(Ainfo + " , AAInfo2 , " + AAothres.othres);
+    }
+
+    public void AAInfo3() {
+        System.out.println(Ainfo + " , AAInfo3 , " + AAothres.othres);
     }
 
 }

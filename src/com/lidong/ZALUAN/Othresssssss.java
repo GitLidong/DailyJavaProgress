@@ -16,6 +16,8 @@ public class Othresssssss {
         String s2 = "abc" + "d";
 
         System.out.println(s1 == s2);
+        int[] array = {1, 2, 3, 4, 5};
+        System.out.println(array.length);
 
 
         // String str = "北京市(朝阳区)(西城区)(海淀区)";
