@@ -33,9 +33,11 @@ public class KMP {
         for (int i = 0; i < source.length(); i++) {
             while (k > -1 && target.charAt(k + 1) != source.charAt(i)) {
                 k = next[k];
+                System.out.println("1: " + k);
             }
             if (target.charAt(k + 1) == source.charAt(i)) {
                 k = k + 1;//成功匹配一个节点
+                System.out.println("2: " + k);
             }
             if (k == target.length() - 1) {//上面一直说k等于已经匹配的长度-1
                 return i - target.length() + 1;
