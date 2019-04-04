@@ -1,15 +1,16 @@
-package com.lidong.suanfa.paixu;
+package com.lidong.suanfa.paixu.sort_demo;
+
 
 import java.util.Stack;
 
-public class QiuckSortDemoByStack extends ArrayResource {
+public class QiuckSortDemoByStack {
 
 
     public static void main(String[] args) {
         int array[] = {49, 38, 65, 97, 76, 13, 27, 49};
         QiuckSortDemoByStack demo = new QiuckSortDemoByStack();
         demo.quickSort(array, 0, array.length - 1);
-        printArray(array);
+        Utils.print(array);
     }
 
 

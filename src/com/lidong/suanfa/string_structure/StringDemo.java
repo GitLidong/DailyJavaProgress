@@ -1,4 +1,4 @@
-package com.lidong.ZALUAN;
+package com.lidong.suanfa.string_structure;
 
 public class StringDemo {
 
@@ -19,6 +19,14 @@ public class StringDemo {
 		builder.reverse();
 		data = builder.toString();
 		System.out.println(data);
+	}
+
+	public static String reverse(String originStr) {
+		if (originStr == null || originStr.length() <= 1) {
+			return originStr;
+		} else {
+			return reverse(originStr.substring(1)) + originStr.charAt(0);
+		}
 	}
 
 	class TestString {

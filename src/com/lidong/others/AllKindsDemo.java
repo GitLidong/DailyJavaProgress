@@ -57,14 +57,6 @@ public class AllKindsDemo {
 
 	}
 
-	public static String reverse(String originStr) {
-		if (originStr == null || originStr.length() <= 1) {
-			return originStr;
-		} else {
-			return reverse(originStr.substring(1)) + originStr.charAt(0);
-		}
-	}
-
 	public static void get() {
 		Scanner scanner = new Scanner(System.in);
 		int a = scanner.nextInt();

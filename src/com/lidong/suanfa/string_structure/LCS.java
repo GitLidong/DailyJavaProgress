@@ -1,8 +1,9 @@
-package com.lidong.suanfa.chazhao;
+package com.lidong.suanfa.string_structure;
 
-
-import java.util.ArrayList;
-import java.util.List;
+/**
+ * 最长子序列
+ *
+ */
 
 public class LCS {
 

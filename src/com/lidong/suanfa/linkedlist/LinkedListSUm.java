@@ -1,4 +1,4 @@
-package com.lidong.suanfa;
+package com.lidong.suanfa.linkedlist;
 
 public class LinkedListSUm {
 

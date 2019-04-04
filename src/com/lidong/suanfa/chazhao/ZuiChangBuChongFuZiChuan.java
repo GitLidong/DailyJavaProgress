@@ -1,7 +1,6 @@
-package com.lidong.suanfa;
+package com.lidong.suanfa.chazhao;
 
 import java.util.ArrayDeque;
-import java.util.Queue;
 
 public class ZuiChangBuChongFuZiChuan {
 

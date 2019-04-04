@@ -2,6 +2,10 @@ package com.lidong.suanfa.paixu.sort_demo;
 
 import java.util.Arrays;
 
+/**
+ * 基数排序
+ */
+
 public class RadixSort {
 
 
@@ -57,19 +61,8 @@ public class RadixSort {
 
     //获取最高位数
     private int getMaxDigit(int[] arr) {
-        int maxValue = getMaxValue(arr);
+        int maxValue = Utils.getMaxValue(arr);
         return getNumLength(maxValue);
-    }
-
-    //获取数组中最大值
-    private int getMaxValue(int[] arr) {
-        int maxValue = arr[0];
-        for (int value : arr) {
-            if (maxValue < value) {
-                maxValue = value;
-            }
-        }
-        return maxValue;
     }
 
     //获取值的长度

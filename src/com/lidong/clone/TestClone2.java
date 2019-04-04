@@ -1,4 +1,4 @@
-package com.lidong.ZALUAN;
+package com.lidong.clone;
 
 public class TestClone2 {
 

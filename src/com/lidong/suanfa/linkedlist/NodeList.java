@@ -32,6 +32,13 @@ public class NodeList {
         list.reverse(list);
         list.print();
 
+        list.reverseList2(list);
+        list.print();
+
+        list.reverseList(list, 2, 4);
+        list.print();
+
+
     }
 
     public void add(int data) {
@@ -206,14 +213,13 @@ public class NodeList {
         Node pre = dummpy.next;
         Node current = pre.next;
         while (current != null) {
-            System.out.println(pre.data + " , " + current.data);
             pre.next = current.next;
             current.next = dummpy.next;
             dummpy.next = current;
 
             current = pre.next;
         }
-        head = dummpy.next;
+        list.head = dummpy.next;
     }
 
 
@@ -228,6 +234,40 @@ public class NodeList {
             dummy.next = pCur;
             pCur = pNex;
         }
+        list.head = dummy.next;
+    }
+
+    public void reverseList(NodeList list, int m, int n) {
+        if (list == null || m >= n || (n - m) == 1) return;
+
+        int go = m;
+        Node dummy = new Node();
+        dummy.next = list.head;
+        Node top = null, tail = null;
+        Node cur = dummy;
+        while (go - 1 > 0) {
+            cur = cur.next;
+            go--;
+        }
+        top = cur;
+        Node reverseBegin = cur.next;
+        go = n - m;
+        while (go >= 0) {
+            cur = cur.next;
+            go--;
+        }
+        tail = cur.next;
+        cur.next = null;
+        Node pre = null;
+        cur = reverseBegin;
+        while (cur != null) {
+            Node nextTemp = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = nextTemp;
+        }
+        top.next = pre;
+        reverseBegin.next = tail;
         list.head = dummy.next;
     }
 }

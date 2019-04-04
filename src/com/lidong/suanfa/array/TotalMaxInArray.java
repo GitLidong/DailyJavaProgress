@@ -1,4 +1,4 @@
-package com.lidong.suanfa;
+package com.lidong.suanfa.array;
 
 /**
  * 打印出数组中相加最大的连续整数

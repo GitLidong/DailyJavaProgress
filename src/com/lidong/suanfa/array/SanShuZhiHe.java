@@ -1,4 +1,4 @@
-package com.lidong.suanfa;
+package com.lidong.suanfa.array;
 
 import java.util.ArrayList;
 import java.util.List;

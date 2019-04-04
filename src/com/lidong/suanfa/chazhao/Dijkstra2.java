@@ -1,8 +1,6 @@
 package com.lidong.suanfa.chazhao;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Dijkstra2 {
 
@@ -17,40 +15,7 @@ public class Dijkstra2 {
                 {-1, -1, -1, -1, -1, 0}
         };
 
-        dijkstra(roads, 0);
-
-    }
-
-    public static void dijkstra(int[][] roads, int start) {
-
-        int[] sure = Arrays.copyOf(roads[start], roads[start].length);
-        List<Integer> sureList = new ArrayList<>();//可以确定最短路径的下标
-        sureList.add(start);
-
-        int[] unSure = getUnSure(sure, sureList);
-
-        while (sureList.size() != roads[start].length) {
-            int minIndex = minIndex(unSure);
-            if (minIndex == -1) break;
-            int[] minLine = roads[minIndex];
-            for (int i = 0; i < minLine.length; i++) {
-                if (minLine[i] > 0) {
-                    if (sure[i] < 0) {
-                        sure[i] = sure[minIndex] + minLine[i];
-                    } else {
-                        if (sure[minIndex] + minLine[i] < sure[i]) {
-                            sure[i] = sure[minIndex] + minLine[i];
-                        }
-                    }
-                }
-            }
-            sureList.add(minIndex);
-            unSure = getUnSure(sure, sureList);
-            print(sure);
-        }
-
-        System.out.println("from " + start + " to others shortest path is : ");
-        print(sure);
+        showDijkstra(roads, 1);
 
     }
 
@@ -61,24 +26,58 @@ public class Dijkstra2 {
         System.out.println();
     }
 
-    private static int minIndex(int[] array) {
-        int minIndex = -1;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] > 0 && minIndex == -1) {
-                minIndex = i;
-            }
-            if (array[i] > 0 && array[i] < array[minIndex]) {
-                minIndex = i;
-            }
-        }
-        return minIndex;
-    }
 
-    private static int[] getUnSure(int[] sure, List<Integer> sureList) {
-        int[] unSure = Arrays.copyOf(sure, sure.length);
-        for (Integer integer : sureList) {
-            unSure[integer] = -1;
+    public static void showDijkstra(int[][] roads, int start) {
+        int len = roads[start].length;
+        int[] line = Arrays.copyOf(roads[start], len); //start到其他点的原本距离
+
+        int[] shortPath = new int[len]; //表示start到个点的最短路径
+        int[] visited = new int[len]; //表示start到个点的最短路径是否已经确认
+
+        shortPath[start] = 0;// start到自身的距离为0
+        visited[start] = 1;// 为1则表示start到该点的最短路径已经确认
+
+        for (int count = 1; count < len; count++) {//总共还需要再确认 len-1 次
+
+            int shortestAndNoVisited = -1;
+            int minValue = -1;
+            for (int i = 0; i < len; i++) {
+                if (visited[i] == 0 && line[i] != -1 && minValue == -1) {
+                    minValue = line[i];
+                    shortestAndNoVisited = i;
+                } else if (visited[i] == 0 && line[i] != -1 && minValue != -1 && line[i] < minValue) {
+                    minValue = line[i];
+                    shortestAndNoVisited = i;
+                }
+            }
+
+            if (shortestAndNoVisited == -1) {
+                continue;
+            }
+
+            // 将新选出的顶点标记为已求出最短路径，且到start的最短路径就是minValue
+            visited[shortestAndNoVisited] = 1;
+            shortPath[shortestAndNoVisited] = minValue;
+
+            System.out.println("shortestAndNoVisited : " + shortestAndNoVisited);
+            System.out.print("ShortPath    : ");
+            print(shortPath);
+            System.out.print("Visited Info : ");
+            print(visited);
+
+            for (int i = 0; i < len; i++) {
+                if (roads[shortestAndNoVisited][i] != -1 && visited[i] == 0) {
+                    if (line[i] == -1) {
+                        line[i] = roads[shortestAndNoVisited][i] + shortPath[shortestAndNoVisited];
+                    } else if (line[i] > (roads[shortestAndNoVisited][i] + shortPath[shortestAndNoVisited])) {
+                        line[i] = roads[shortestAndNoVisited][i] + shortPath[shortestAndNoVisited];
+                    }
+                }
+            }
+            System.out.print("line Info    : ");
+            print(line);
         }
-        return unSure;
+
+        print(line);
     }
 }
